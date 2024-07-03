@@ -22,7 +22,7 @@ Este proyecto consiste en la creación de un dataset propio de imágenes de gato
 ## 💻 Instalacion 💻
 1. Clonar el repositorio:  
 `git clone https://github.com/usuario/proyecto_gatos_perros.git`
-2. Instalar las dependencias:
+2. Instalar las dependencias:  
 `pip install -r requirements.txt`
 
 ## 📸 Preparación del Dataset 📸

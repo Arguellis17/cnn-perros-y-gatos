@@ -15,7 +15,7 @@ labels = []
 imagenes = []
 
 # Especifica la ruta hacia tu dataset
-#ruta = "C:\\Users\\argue\\OneDrive\\Escritorio\\datasets\\train"
+ruta = "C:\\Users\\argue\\OneDrive\\Escritorio\\UFPS\Pensúm\\1156703 - Inteligencia Artificial\\TRABAJOS\\cnn - cats and dogs\\datasets\\train"
 categorias = os.listdir(ruta)
 
 #Verificar que hayan cargado las categorias
@@ -102,11 +102,11 @@ model.compile(optimizer='adam',
 #Al momento de entrenar nuestro modelo, podemos especificar el tamaño del lote (subconjunto de datos) con el
 #que trabajara el modelo en cuestión, a traves del atributo 'batch_size = tamaño_del_lote'. Si no se especifica
 #el tamaño, el modelo lo tomara con un valor de 'none', en referencia a que no esta limitado.
-history = model.fit(imagenes, labels, epochs = 25)
+history = model.fit(imagenes, labels, epochs = 7)
 
 #Especifica la ruta hacia la imagen de prueba
 # Evaluar el modelo
-#im = Image.open('C:\\Users\\argue\\OneDrive\\Escritorio\\datasets\\test\\1.jpg').resize((200, 200))
+im = Image.open('C:\\Users\\argue\\OneDrive\\Escritorio\\UFPS\Pensúm\\1156703 - Inteligencia Artificial\\TRABAJOS\\cnn - cats and dogs\\datasets\\test\\1.jpg').resize((200, 200))
 im = np.asarray(im)
 im = im[:, :, 0]  # Tomar solo el primer canal (rojo)
 im = np.expand_dims(im, axis=0)  # Agregar una dimensión que indica que el lote es de una sola imagen 
@@ -154,11 +154,8 @@ plt.ylabel('Precisión')
 plt.legend()
 plt.show()
 
-#Exportar modelo: COMANDOS EN CMD
-#pip install tensorflowjs
-#tensorflowjs_converter --input_format=tf_saved_model "C:\Users\argue\OneDrive\Escritorio\clasificacion\modelo\saved_model" "C:\Users\argue\OneDrive\Escritorio\clasificacion\modelo_js"
 
 #Obtener el resumen del modelo
 print(model.summary()),
 
-# ME VA A IR BIEN EN LA EXPO, ME VA A IR BIEN EN LA EXPO, SI TODO SALE BIEN SERÉ EXIMIDO 
+
